@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KidsApp.Views.Registration.Preaccept"
+             Title="Atras         Preaceptacion">
+    
+    <StackLayout BackgroundColor ="#ffffff">
+        <Label Text="Antes de continuar con el registro, tu y tus padres o representantes estan aceptando los terminos y condiciones al usar esta aplicacion con fines educacionales" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    <Button Text="LEER TERMINOS Y CONDICIONES" BackgroundColor="Purple" Clicked="Button_GoToTermsAndConditions"/>
+    <Button Text="CONTINUAR" BackgroundColor="Purple" Clicked="Button_GoToRegistration"/>
+    </StackLayout>
+
+</ContentPage>

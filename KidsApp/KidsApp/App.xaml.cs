@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 
 namespace KidsApp
@@ -13,7 +12,7 @@ namespace KidsApp
         {
             InitializeComponent();
 
-            MainPage = new KidsApp.welcome();
+            MainPage = new NavigationPage (new welcome());
         }
 
         protected override void OnStart()

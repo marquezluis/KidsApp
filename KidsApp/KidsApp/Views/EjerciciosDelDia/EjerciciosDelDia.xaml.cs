@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace KidsApp
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace KidsApp.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class EjerciciosDelDia : ContentPage
     {
-        public MainPage()
+        public EjerciciosDelDia()
         {
             InitializeComponent();
         }

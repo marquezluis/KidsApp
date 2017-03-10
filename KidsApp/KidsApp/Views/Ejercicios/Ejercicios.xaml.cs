@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-namespace KidsApp
+namespace KidsApp.Views
 {
-    public partial class welcome: ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Ejercicios : ContentPage
     {
-        public welcome()
+        public Ejercicios()
         {
             InitializeComponent();
         }

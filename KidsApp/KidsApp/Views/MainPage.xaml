@@ -9,7 +9,7 @@
 
 
     <StackLayout BackgroundColor ="#ffffff">
-
+       
         <!--Sets the layout about how you will be design the page, with stacklayout or tables 
   (i don't know the command to do it) and set the background color to any other than black 
   on Android, must be declared as HEX code. -->
@@ -17,14 +17,14 @@
         <!-- AQUI FALTA EL HOLA Y EL NOMBRE DEL USUARIO -->
 
 
-        <Label Text="Empieza tu día haciendo esta rutina de ejercicios:" HorizontalTextAlignment="Center"/>
-        <Button Text="EJERCICIOS DEL DIA" BackgroundColor="Purple" Clicked="Button_GoToEjerciciosDelDia"/>
-        <Label Text="Si quieres saber como vas en tus rutinas...:" HorizontalTextAlignment="Center"/>
-        <Button Text="PROGRESOS" BackgroundColor="Purple" Clicked="Button_GoToProgresos"/>
-        <Label Text="Para ver que ejercicios estan disponibles..." HorizontalTextAlignment="Center"/>
-        <Button Text="EJERCICIOS" BackgroundColor="Purple" Clicked="Button_GoToEjercicios"/>
-        <Label Text="Aprende cada dia mas con estos consejos:" HorizontalTextAlignment="Center"/>
-        <Button Text="TIPS" BackgroundColor="Purple" Clicked="Button_GoToTips"/>
+        <Label Text="Empieza tu día haciendo esta rutina de ejercicios:" HorizontalTextAlignment="Center" TextColor="Black"/>
+        <Button Text="EJERCICIOS DEL DIA" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjerciciosDelDia"/>
+        <Label Text="Si quieres saber como vas en tus rutinas...:" HorizontalTextAlignment="Center" TextColor="Black"/>
+        <Button Text="PROGRESOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToProgresos"/>
+        <Label Text="Para ver que ejercicios estan disponibles..." HorizontalTextAlignment="Center" TextColor="Black"/>
+        <Button Text="EJERCICIOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjercicios"/>
+        <Label Text="Aprende cada dia mas con estos consejos:" HorizontalTextAlignment="Center" TextColor="Black"/>
+        <Button Text="TIPS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToTips"/>
 
     </StackLayout>
 </ContentPage>

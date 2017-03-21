@@ -6,46 +6,64 @@
 
     <!--This applicaton works with HTML encoding-->
 
+    <Grid>
+        <Image Source="fondo.jpeg" Aspect="Fill"/>
 
-    <StackLayout BackgroundColor ="#ffffff">
+        <ScrollView>
+            <StackLayout Margin="20">
 
-        <!--Sets the layout about how you will be design the page, with stacklayout or tables 
+
+                <!--Sets the layout about how you will be design the page, with stacklayout or tables 
   (i don't know the command to do it) and set the background color to any other than black 
   on Android, must be declared as HEX code. -->
 
-        <Label  Text="Kids Excercise App" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" FontSize="Large"/>
+                <Label  Text="Bienvenidos a" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
+                <Image Source="image_1.png" HorizontalOptions="Center" WidthRequest="200" HeightRequest="100" Margin="0,5,0,0"></Image>
+                <Label  Text="App" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
 
-        <!--Sets the label, means that how the compiler puts some data in the program. In this 
+
+                <!--Sets the label, means that how the compiler puts some data in the program. In this 
   case, i used the sub-command text because i want to show only text. Now, we can set the 
-  attributes: Vertical and horizontal TextAlignment the alingment can be top, bottom, left
+  attributes: Vertical and horizontal Te
+        xtAlignment the alingment can be top, bottom, left
   and right (depends the case).-->
+                <BoxView BackgroundColor="Black" HeightRequest="1" Margin=" 0,5,0,0"/>
+                <Label  Text="Ingresa tus credenciales:" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
+                <Label Text="Usuario:" VerticalTextAlignment="Start" TextColor="Black"/>
+                <Entry Placeholder="Escriba su usuario o email" HorizontalTextAlignment="Center" TextColor="Black" PlaceholderColor="Gray"/>
+                <Label Text="Contraseña:" VerticalTextAlignment="Start" TextColor="Black" />
+                <Entry Placeholder="Escriba su contraseña" IsPassword="True" TextColor="Black" HorizontalTextAlignment="Center" PlaceholderColor="Gray"/>
 
-        <Label Text="Usuario:" VerticalTextAlignment="Start"/>
-        <Entry Placeholder="Escriba su usuario o email" HorizontalTextAlignment="Center"/>
-        <Label Text="Contraseña:" VerticalTextAlignment="Start"/>
-        <Entry Placeholder="Escriba su contraseña" IsPassword="True" HorizontalTextAlignment="Center"/>
-
-        <!--Sets the field that we can input data on it, and It will show the keyboard. we must set
+                <!--Sets the field that we can input data on it, and It will show the keyboard. we must set
   the alignment. -->
 
 
-        <Label Text="Guardar usuario" VerticalTextAlignment="Start"/>
-        <Switch />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Guardar usuario" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Switch Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center"/>
+                </Grid>
+                
 
-        <!--It's a boolean variable to verify if a value will be true or false. 
+                <!--It's a boolean variable to verify if a value will be true or false. 
     
     <Slider Minimum="0" Maximum="100"/> -->
 
-        <!--Sets the bar to decrease or increase a value. Example: the age of the user. -->
+                <!--Sets the bar to decrease or increase a value. Example: the age of the user. -->
 
-        <Button Text="ingresar" BorderColor="Black" Clicked="Button_GoToMainPage"/>
-        <Button Text="Limpiar" BorderColor="Black"/>
-        <Button Text="¿Nuevo usuario?" BorderColor="Black" Clicked="Button_GoToPreaccept"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                    <Button Text="    Ingresar    " BorderColor="Black" Clicked="Button_GoToMainPage" BackgroundColor="#541c83" />
+                    <Button Text="  ¿Nuevo usuario?  " Clicked="Button_GoToPreaccept" BackgroundColor="#003366"/>
+                </StackLayout>
+                <!--Sets the button to perform a specified action. -->
 
-        <!--Sets the button to perform a specified action. -->
+                <Label Text="Version Beta 0.2" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,19,0,0"/>
+                <Label Text="Desarrollado por Luis Marquez y Lesly Daher" HorizontalTextAlignment="Center" TextColor="Black"/>
 
-        <Label Text="Version Beta 1.0" HorizontalTextAlignment="Center"/>
-        <Label Text="Desarrollado por Luis Marquez y Lesly Daher" HorizontalTextAlignment="Center"/>
-
-    </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

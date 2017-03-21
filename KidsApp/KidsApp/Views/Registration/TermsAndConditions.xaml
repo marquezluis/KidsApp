@@ -2,4 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsApp.Views.Registration.TermsAndConditions">
+
+    <Label Text="Como tantas otras redes sociales, L- Fit está pensado y diseñado para el desarrollo físico y entretenimiento de los jóvenes que van a usar esta aplicación.
+
+L-Fit no se hace responsable por lesiones ocurridas sin la debida ayuda de un adulto o representante a los menores al momento de realizar cualquier actividad física.
+
+Todos los ejercicios acá expuestos han sido estudiados por personal cualificado en el tema.
+
+Nunca dejar a los niños sin supervisión de un adulto." HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 </ContentPage>

@@ -19,7 +19,7 @@
   on Android, must be declared as HEX code. -->
 
                 <Label  Text="Bienvenidos a" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
-                <Image Source="image_1.png"/>
+                <Image Source="Image_1.png"/>
                 <Label  Text="App" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
 
 

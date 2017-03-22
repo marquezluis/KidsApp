@@ -18,7 +18,7 @@
             <!-- AQUI FALTA EL HOLA Y EL NOMBRE DEL USUARIO -->
 
             <Label Text="Hola, XXXX" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20" Margin="0,10,0,0"/>
-            <Label Text="Haz de tu dia mas saludable haciendo esta rutina de ejercicios:" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Label Text="Haz tu dia mas saludable haciendo estos ejercicios:" HorizontalTextAlignment="Center" TextColor="Black"/>
             <Button Text="EJERCICIOS DEL DIA" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjerciciosDelDia"/>
             <Label Text="Si quieres saber como vas en tus rutinas...:" HorizontalTextAlignment="Center" TextColor="Black"/>
             <Button Text="PROGRESOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToProgresos"/>

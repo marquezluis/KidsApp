@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="KidsApp.welcome">
+             x:Class="KidsApp.welcome"
+             Title="         Bienvenido">
 
 
     <!--This applicaton works with HTML encoding-->
 
     <Grid>
         <Image Source="fondo.jpeg" Aspect="Fill"/>
-
         <ScrollView>
             <StackLayout Margin="20">
 
@@ -18,7 +19,7 @@
   on Android, must be declared as HEX code. -->
 
                 <Label  Text="Bienvenidos a" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
-                <Image Source="image_1.png" HorizontalOptions="Center" WidthRequest="200" HeightRequest="100" Margin="0,5,0,0"></Image>
+                <Image Source="image_1.png"/>
                 <Label  Text="App" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
 
 
@@ -38,15 +39,9 @@
   the alignment. -->
 
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="6*"/>
-                        <ColumnDefinition Width="2*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="Guardar usuario" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center"/>
-                    <Switch Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center"/>
-                </Grid>
-                
+
+                <controls:CheckBox DefaultText="Guardar información" HorizontalOptions="EndAndExpand" TextColor="Black" />
+
 
                 <!--It's a boolean variable to verify if a value will be true or false. 
     
@@ -55,8 +50,8 @@
                 <!--Sets the bar to decrease or increase a value. Example: the age of the user. -->
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
-                    <Button Text="    Ingresar    " BorderColor="Black" Clicked="Button_GoToMainPage" BackgroundColor="#541c83" />
-                    <Button Text="  ¿Nuevo usuario?  " Clicked="Button_GoToPreaccept" BackgroundColor="#003366"/>
+                    <Button Text="  Ingresar  " BorderColor="Black" Clicked="Button_GoToLoading" BackgroundColor="#541c83" TextColor="White" />
+                    <Button Text="¿Nuevo usuario?" Clicked="Button_GoToPreaccept" BackgroundColor="#003366" TextColor="White"/>
                 </StackLayout>
                 <!--Sets the button to perform a specified action. -->
 

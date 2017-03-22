@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KidsApp.Views.Loading"
+             Title="Cargando...">
+
+    <StackLayout>
+        <Label Text="Cargando..." HorizontalTextAlignment="Center"/>
+        <Label Text="Mientras carga el menu..." HorizontalTextAlignment="Center"/>
+        <Label Text="TIP DEL DIA" HorizontalTextAlignment="Center" Font="Bold,Italic,30"/>
+
+        <!--Here goes the DB code-->
+        <Button Text="    Continuar    " BorderColor="Black" Clicked="Button_GoToMainPage" BackgroundColor="#541c83" TextColor="White" />
+    </StackLayout>
+</ContentPage>

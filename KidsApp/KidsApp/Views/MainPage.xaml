@@ -1,30 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="KidsApp.MainPage"
+             x:Class="KidsApp.Views.MainPage"
              Title="Salir         Menu Principal">
 
 
     <!--This applicaton works with HTML encoding-->
 
+    <Grid>
+        <Image Source="fondo.jpeg" Aspect="Fill"/>
+        <StackLayout Margin="20">
 
-    <StackLayout BackgroundColor ="#ffffff">
-       
-        <!--Sets the layout about how you will be design the page, with stacklayout or tables 
+            <!--Sets the layout about how you will be design the page, with stacklayout or tables 
   (i don't know the command to do it) and set the background color to any other than black 
   on Android, must be declared as HEX code. -->
- 
-        <!-- AQUI FALTA EL HOLA Y EL NOMBRE DEL USUARIO -->
 
+            <!-- AQUI FALTA EL HOLA Y EL NOMBRE DEL USUARIO -->
 
-        <Label Text="Empieza tu día haciendo esta rutina de ejercicios:" HorizontalTextAlignment="Center" TextColor="Black"/>
-        <Button Text="EJERCICIOS DEL DIA" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjerciciosDelDia"/>
-        <Label Text="Si quieres saber como vas en tus rutinas...:" HorizontalTextAlignment="Center" TextColor="Black"/>
-        <Button Text="PROGRESOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToProgresos"/>
-        <Label Text="Para ver que ejercicios estan disponibles..." HorizontalTextAlignment="Center" TextColor="Black"/>
-        <Button Text="EJERCICIOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjercicios"/>
-        <Label Text="Aprende cada dia mas con estos consejos:" HorizontalTextAlignment="Center" TextColor="Black"/>
-        <Button Text="TIPS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToTips"/>
-
-    </StackLayout>
+            <Label Text="Hola, XXXX" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20" Margin="0,10,0,0"/>
+            <Label Text="Haz de tu dia mas saludable haciendo esta rutina de ejercicios:" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Button Text="EJERCICIOS DEL DIA" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjerciciosDelDia"/>
+            <Label Text="Si quieres saber como vas en tus rutinas...:" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Button Text="PROGRESOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToProgresos"/>
+            <Label Text="Para ver que ejercicios estan disponibles..." HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Button Text="EJERCICIOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjercicios"/>
+            <Label Text="Aprende cada dia mas con estos consejos:" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Button Text="TIPS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToTips"/>
+            <Label Text="Si quieres aprender mas de esta aplicación, te sugerimos que consultes esta guía:" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Button Text="AYUDA" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToHelp"/>
+            <Button Text="SALIR" Clicked="Button_GoToExit" BackgroundColor="#003366" TextColor="White"/>
+        </StackLayout>
+    </Grid>
 </ContentPage>

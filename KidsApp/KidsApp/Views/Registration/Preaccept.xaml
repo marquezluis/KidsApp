@@ -3,24 +3,19 @@
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsApp.Views.Registration.Preaccept"
-             Title="Atras         Preaceptacion">
+             Title="             Preaceptacion">
+
     <Grid BackgroundColor="White">
 
         <StackLayout BackgroundColor="White" Margin="20">
-            <Label TextColor="Black" Text="Preaceptacion" HorizontalTextAlignment="Center" Margin="0,20,0,50"/>
-            <Image Source="exclamation.png" Aspect="Fill"/>
+            
+            <Image Source="exclamation.png"/>
             <Label TextColor="Black" Text="Antes de continuar con el registro, tu y tus padres o representantes estan aceptando los terminos y condiciones al usar esta aplicacion con fines educacionales" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,10,0,10"/>
             <Button Text="LEER TERMINOS Y CONDICIONES" BackgroundColor="#cccccc" TextColor="White" Clicked="Button_GoToTermsAndConditions"/>
-            <Label Margin="0,5,0,5"/>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="1" Text="Si, estoy de acuerdo" VerticalOptions="Center" TextColor="Black"/>
-                <Switch Grid.Column="0" IsEnabled="True" HorizontalOptions="End"/>
-            </Grid>
-            <Button Text="CONTINUAR" BackgroundColor="Purple" Clicked="Button_GoToRegistration" IsEnabled="False" Margin="0,5,0,5"/>
+            <Label Margin="0,5,0,0"/>
+            <controls:CheckBox Grid.Column="0" CheckedText="Si, Estoy de acuerdo" HorizontalOptions="CenterAndExpand" DefaultText="Default text" TextColor="Black" UncheckedText="No, no estoy de acuerdo"/>
+            <Button Text="CONTINUAR" BackgroundColor="Purple" Clicked="Button_GoToRegistration" IsEnabled="True" Margin="0,5,0,5" TextColor="White"/>
+            
         </StackLayout>
     </Grid>
 

@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace KidsApp.Views.Progresos
+namespace KidsApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Progresos : ContentPage
+    public partial class Loading : ContentPage
     {
-        public Progresos()
+        public Loading()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void Button_GoToMainPage(object sender, EventArgs e)

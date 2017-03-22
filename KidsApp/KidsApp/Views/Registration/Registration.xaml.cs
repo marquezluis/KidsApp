@@ -15,6 +15,14 @@ namespace KidsApp.Views.Registration
         public Registration()
         {
             InitializeComponent();
+            Title = "Registro";
+            NavigationPage.SetHasNavigationBar(this, false); //Usable when needs to disappear the navigation toolbar//
+        }
+
+        private async void Button_GoToWelcome(object sender, EventArgs e)
+        {
+            Navigation.InsertPageBefore(new welcome(), this);
+            await Navigation.PopAsync().ConfigureAwait(false);
         }
     }
 }

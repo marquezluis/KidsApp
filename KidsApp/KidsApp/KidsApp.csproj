@@ -38,14 +38,32 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Ejercicios\Advance\Advance.xaml.cs">
+      <DependentUpon>Advance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ejercicios\Intermediate\Intermediate.xaml.cs">
+      <DependentUpon>Intermediate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ejercicios\Newbie\Newbie.xaml.cs">
+      <DependentUpon>Newbie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ejercicios\Ejercicios.xaml.cs">
       <DependentUpon>Ejercicios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EjerciciosDelDia\EjerciciosDelDia.xaml.cs">
       <DependentUpon>EjerciciosDelDia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Exit.xaml.cs">
+      <DependentUpon>Exit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Progresos\Progresos.xaml.cs">
       <DependentUpon>Progresos.xaml</DependentUpon>
@@ -58,6 +76,9 @@
     </Compile>
     <Compile Include="Views\Registration\TermsAndConditions.xaml.cs">
       <DependentUpon>TermsAndConditions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tips\DisplayTips.xaml.cs">
+      <DependentUpon>DisplayTips.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Tips\Tips.xaml.cs">
       <DependentUpon>Tips.xaml</DependentUpon>
@@ -163,6 +184,51 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Registration\Registration.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Loading.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Ejercicios\Newbie\Newbie.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Help\Help.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Ejercicios\Intermediate\Intermediate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Ejercicios\Advance\Advance.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Ejercicios\Exercises\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Tips\DisplayTips.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Exit.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

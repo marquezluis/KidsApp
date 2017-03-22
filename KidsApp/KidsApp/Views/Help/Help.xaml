@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KidsApp.Views.Help.Help"
+            Title="Atrás           Ayuda">
+    <Grid>
+        <Image Source="fondo.jpeg" Aspect="Fill"/>
+        <ScrollView>
+            <StackLayout Margin="20">
+                <Label Text="-Objetivo-" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="25"/>
+                <Label Text="Esta app esta basada en ayudar a niños y adolescentes entre las edades de 4 (cuatro) y quince (15) años a desarrollarse de forma física y, por ende, combatir el problema de obesidad y sedentarismo que ataca a la población mundial." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
+                <Label Text="-Características-" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="25"/>
+                <Label Text="La aplicación ofrece a sus usuarios, además de ejercitarse, aprender a llevar una vida más integral. En la sección de Tips, podrán encontrar consejos nutricionales, obtener videos educacionales de índole social (asociados a la moral y buenas costumbres) y cómo realizar de forma correcta los ejercicios que están disponibles en la sección de Ejercicios." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
+                <Label Text="-Funcionalidades-" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="25"/>
+                <Label Text="En la sección 'Ejercicios del Día', podrá el usuario una vez al día ejercitarse de acuerdo a su nivel y progreso, con el objetivo de desarrollar de forma efectiva y eficiente su físico saludablemente." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
+                <Label Text="En la sección 'Progresos', podrá visualizar los datos personales que suministró al registrarse y también el progreso que ha llevado desde que inició por primera vez la aplicación hasta el momento de la consulta." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
+                <Label Text="En la sección 'Ejercicios', están una serie ejercicios que están clasificados deacuerdo a su dificultad de manera informativa." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
+                <Label Text="En la sección 'Tips del día', se encuentran varios consejos útiles en el área deportiva, familiar y de nutrición. Adicionalmente, se encuentra el link 'Video del día', que redireccionará a YouTube para reproducir videos interesantes." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
+                
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

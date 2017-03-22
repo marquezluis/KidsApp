@@ -13,12 +13,13 @@ namespace KidsApp
         public welcome()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false); //Usable when needs to disappear the navigation toolbar//
 
         }
 
-        private async void Button_GoToMainPage(object sender, EventArgs e)
+        private async void Button_GoToLoading(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new Views.Loading());
         }
 
         private async void Button_GoToPreaccept(object sender, EventArgs e)

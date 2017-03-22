@@ -7,19 +7,20 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace KidsApp.Views.Progresos
+namespace KidsApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Progresos : ContentPage
+    public partial class Exit : ContentPage
     {
-        public Progresos()
+        public Exit()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private async void Button_GoToMainPage(object sender, EventArgs e)
+        private async void Button_GoTowelcome(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.MainPage());
+            await Navigation.PushAsync(new welcome());
         }
     }
 }

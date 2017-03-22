@@ -7,19 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace KidsApp.Views.Progresos
+namespace KidsApp.Views.Ejercicios.Advance
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Progresos : ContentPage
+    public partial class Advance : ContentPage
     {
-        public Progresos()
+        public Advance()
         {
             InitializeComponent();
-        }
-
-        private async void Button_GoToMainPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Views.MainPage());
         }
     }
 }

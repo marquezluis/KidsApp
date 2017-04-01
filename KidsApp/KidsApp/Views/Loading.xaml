@@ -4,9 +4,16 @@
              x:Class="KidsApp.Views.Loading"
              Title="Cargando...">
 
-    <StackLayout>
-        <Label Text="Cargando..." HorizontalTextAlignment="Center"/>
-        <Label Text="Mientras carga el menu..." HorizontalTextAlignment="Center"/>
-        <Label Text="TIP DEL DIA" HorizontalTextAlignment="Center" Font="Bold,Italic,30"/>
-    </StackLayout>
+    <Grid>
+        <Image Source="FondoAzul.jpg" Aspect="Fill"/>
+        <StackLayout>
+            <Label Text="Mientras carga el menu..." HorizontalTextAlignment="Center" TextColor="Black" FontSize="Large"/>
+            <Label Text="TIP DEL DIA" HorizontalTextAlignment="Center" Font="Bold,Italic,30" TextColor="Black" Margin="0,30,0,0"/>
+            <Grid VerticalOptions="EndAndExpand">
+                <Label HeightRequest="40" Text="Cargando..." HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalOptions="End" BackgroundColor="#003366" FontSize="Large" WidthRequest="500"/>
+            </Grid>
+        </StackLayout>
+    </Grid>
+
+      
 </ContentPage>

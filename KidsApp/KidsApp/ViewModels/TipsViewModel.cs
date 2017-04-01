@@ -28,9 +28,6 @@ namespace KidsApp.ViewModels
         }
         public Command GoToYouTube { get; set; }
 
-        
-
-
         private async Task OnReadyGoToYouTube()
         {
             Device.OpenUri(new Uri("https://www.youtube.com/watch?v=SNrAqVZ6BxE"));

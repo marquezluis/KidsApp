@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsApp.Views.Exit">
     <Grid>
-        <Image Source="fondo.jpeg" Aspect="Fill"/>
+        <Image Source="Adios.jpeg" Aspect="Fill" VerticalOptions="EndAndExpand"/>
         <StackLayout Margin="20">
-            <Image Source="Image_exit.png"/>
-            <Label Text="Recuerda comer sano y tomar mucha agua!!!" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Image Source="Image_1.png" HeightRequest="70" WidthRequest="70" />
+            <Label Text="Vuelve pronto para seguir entrenando y aprendiendo cosas nuevas cada día!!!" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
+            <Grid HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Nos veremos de nuevo " HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" TextColor="Black" FontSize="20" Margin="0,20,0,0" />
+            <Label Grid.Column="1" Text="{Binding Info.Name}" HorizontalTextAlignment="Start" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="20"/>
+            </Grid>
         </StackLayout>
     </Grid>
 </ContentPage>

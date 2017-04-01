@@ -17,25 +17,18 @@
                         <RowDefinition Height="0.5*"/>
                         <RowDefinition Height="0.5*"/>
                         <RowDefinition Height="0.5*"/>
-                        <RowDefinition Height="0.5*"/>
-                        <RowDefinition Height="0.5*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="8*"/>
                         <ColumnDefinition Width="20*"/>
                     </Grid.ColumnDefinitions>
                     <Label Text="Nombre:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
-                    <Label Grid.Column="1" Text="Nombre" HorizontalTextAlignment="Center" TextColor="Black"></Label>
-                    <Label Grid.Row="1" Text="Apellido:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
-                    <Label Grid.Column="1" Grid.Row="1" Text="Apellido" HorizontalTextAlignment="Center" TextColor="Black"></Label>
-                    <Label Grid.Row="2" Text="Edad:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
-                    <Label Grid.Column="1" Grid.Row="2" Text="Edad" HorizontalTextAlignment="Center" TextColor="Black"></Label>
-                    <Label Grid.Row="3" Text="Sexo:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
-                    <Label Grid.Column="1" Grid.Row="3" Text="Sexo" HorizontalTextAlignment="Center" TextColor="Black"></Label>
-                    <Label Grid.Row="4" Text="Usuario:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
-                    <Label Grid.Column="1" Grid.Row="4" Text="Usuario" HorizontalTextAlignment="Center" TextColor="Black"></Label>
-                    <Label Grid.Row="5" Text="E-mail:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
-                    <Label Grid.Column="1" Grid.Row="5" Text="E-Mail" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Column="1" Text="" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Row="1" Text="Edad:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
+                    <Label Grid.Column="1" Grid.Row="1" Text="" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                    <Label Grid.Row="2" Text="Sexo:" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black"></Label>
+                    <Label Grid.Column="1" Grid.Row="2" Text="" HorizontalTextAlignment="Center" TextColor="Black"></Label>
+                   
                 </Grid>
                 <BoxView BackgroundColor="Black" HeightRequest="1" Margin=" 0,5,0,0"/>
                 <Label Text="Informacion de desempeño:" TextColor="Black" HorizontalTextAlignment="Start" Margin="0,5,0,10" FontAttributes="Bold" FontSize="Large"/>

@@ -14,7 +14,10 @@ namespace KidsApp
 
             MainPage = new NavigationPage (new welcome());
         }
-
+        public static INavigation Navigation
+        {
+            get { return App.Current.MainPage.Navigation; }
+        }
         protected override void OnStart()
         {
             // Handle when your app starts

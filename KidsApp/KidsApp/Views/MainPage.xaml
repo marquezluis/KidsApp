@@ -16,19 +16,25 @@
   on Android, must be declared as HEX code. -->
 
             <!-- AQUI FALTA EL HOLA Y EL NOMBRE DEL USUARIO -->
-
-            <Label Text="Hola, XXXX" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20" Margin="0,10,0,0"/>
+            <Grid HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hola, " HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" VerticalOptions="Center" TextColor="Black" FontSize="20" />
+                <Label Grid.Column="1" Text="{Binding Info.Name}" HorizontalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="20"/>
+            </Grid>
             <Label Text="Haz tu dia mas saludable haciendo estos ejercicios:" HorizontalTextAlignment="Center" TextColor="Black"/>
-            <Button Text="EJERCICIOS DEL DIA" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjerciciosDelDia"/>
+            <Button Text="EJERCICIOS DEL DIA" BackgroundColor="Purple" TextColor="White" Command="{Binding GoToEjerciciosDelDia}"/>
             <Label Text="Si quieres saber como vas en tus rutinas...:" HorizontalTextAlignment="Center" TextColor="Black"/>
-            <Button Text="PROGRESOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToProgresos"/>
+            <Button Text="PROGRESOS" BackgroundColor="Purple" TextColor="White" Command="{Binding GoToProgresos}"/>
             <Label Text="Para ver que ejercicios estan disponibles..." HorizontalTextAlignment="Center" TextColor="Black"/>
-            <Button Text="EJERCICIOS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToEjercicios"/>
+            <Button Text="EJERCICIOS" BackgroundColor="Purple" TextColor="White" Command="{Binding GoToEjercicios}"/>
             <Label Text="Aprende cada dia mas con estos consejos:" HorizontalTextAlignment="Center" TextColor="Black"/>
-            <Button Text="TIPS" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToTips"/>
+            <Button Text="TIPS" BackgroundColor="Purple" TextColor="White" Command="{Binding GoToTips}"/>
             <Label Text="Si quieres aprender mas de esta aplicación, te sugerimos que consultes esta guía:" HorizontalTextAlignment="Center" TextColor="Black"/>
-            <Button Text="AYUDA" BackgroundColor="Purple" TextColor="White" Clicked="Button_GoToHelp"/>
-            <Button Text="SALIR" Clicked="Button_GoToExit" BackgroundColor="#003366" TextColor="White"/>
+            <Button Text="AYUDA" BackgroundColor="Purple" TextColor="White" Command="{Binding GoToHelp}"/>
+            <Button Text="SALIR" Command="{Binding GoToExit}" BackgroundColor="#003366" TextColor="White"/>
         </StackLayout>
     </Grid>
 </ContentPage>

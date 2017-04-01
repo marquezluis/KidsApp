@@ -7,7 +7,6 @@
         <StackLayout Margin="20">
             <Image Source="Image_exit.png"/>
             <Label Text="Recuerda comer sano y tomar mucha agua!!!" HorizontalTextAlignment="Center" TextColor="Black"/>
-            <Button Text="OK" BorderColor="Black" Clicked="Button_GoTowelcome" BackgroundColor="#541c83" TextColor="White" />
         </StackLayout>
     </Grid>
 </ContentPage>

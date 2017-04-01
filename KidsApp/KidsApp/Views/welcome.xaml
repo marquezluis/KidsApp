@@ -3,62 +3,84 @@
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsApp.welcome"
-             Title="         Bienvenido">
-
-
-    <!--This applicaton works with HTML encoding-->
+             Title="Bienvenido">
 
     <Grid>
-        <Image Source="fondo.jpeg" Aspect="Fill"/>
-        <ScrollView>
-            <StackLayout Margin="20">
-
-
-                <!--Sets the layout about how you will be design the page, with stacklayout or tables 
-  (i don't know the command to do it) and set the background color to any other than black 
-  on Android, must be declared as HEX code. -->
-
-                <Label  Text="Bienvenidos a" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
-                <Image Source="Image_1.png"/>
-                <Label  Text="App" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
-
-
-                <!--Sets the label, means that how the compiler puts some data in the program. In this 
-  case, i used the sub-command text because i want to show only text. Now, we can set the 
-  attributes: Vertical and horizontal Te
-        xtAlignment the alingment can be top, bottom, left
-  and right (depends the case).-->
-                <BoxView BackgroundColor="Black" HeightRequest="1" Margin=" 0,5,0,0"/>
-                <Label  Text="Ingresa tus credenciales:" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
-                <Label Text="Usuario:" VerticalTextAlignment="Start" TextColor="Black"/>
-                <Entry Placeholder="Escriba su usuario o email" HorizontalTextAlignment="Center" TextColor="Black" PlaceholderColor="Gray"/>
-                <Label Text="Contraseña:" VerticalTextAlignment="Start" TextColor="Black" />
-                <Entry Placeholder="Escriba su contraseña" IsPassword="True" TextColor="Black" HorizontalTextAlignment="Center" PlaceholderColor="Gray"/>
-
-                <!--Sets the field that we can input data on it, and It will show the keyboard. we must set
-  the alignment. -->
-
-
-
-                <controls:CheckBox DefaultText="Guardar información" HorizontalOptions="EndAndExpand" TextColor="Black" />
-
-
-                <!--It's a boolean variable to verify if a value will be true or false. 
-    
-    <Slider Minimum="0" Maximum="100"/> -->
-
-                <!--Sets the bar to decrease or increase a value. Example: the age of the user. -->
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
-                    <Button Text="  Ingresar  " BorderColor="Black" Clicked="Button_GoToLoading" BackgroundColor="#541c83" TextColor="White" />
-                    <Button Text="¿Nuevo usuario?" Clicked="Button_GoToPreaccept" BackgroundColor="#003366" TextColor="White"/>
+    <Image Source="fondo.jpeg" Aspect="Fill"/>
+    <StackLayout Margin="20">
+            <Image Source="Image_1.png" HeightRequest="70" WidthRequest="70" />
+            <Label Text="¡Hola!" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+            <Grid IsVisible="{Binding FirstTime}">
+                <StackLayout>
+                <Image Source="exclamation.png"/>
+                <Label TextColor="Black" Text="Antes de continuar con el registro, y como también es tu primera vez usando esta aplicación, tu y tus padres o representantes estan aceptando los terminos y condiciones al usar esta aplicacion con fines educacionales" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,10,0,10"/>
+                <Button Text="Leer Términos y Condiciones" BackgroundColor="#cccccc" TextColor="White" Command="{Binding GoToTermsAndConditions}"/>
+                <Label Margin="0,5,0,0"/>
+                <controls:CheckBox Grid.Column="0" CheckedText="Si, Estoy de acuerdo" Checked="{Binding Checked}" HorizontalOptions="CenterAndExpand" DefaultText="Default text" TextColor="Black" UncheckedText="No, no estoy de acuerdo"/>
+                <Button Text="Continuar" BackgroundColor="Purple" Command="{Binding GoToNew}" IsEnabled="True" TextColor="White"/>
                 </StackLayout>
-                <!--Sets the button to perform a specified action. -->
+            </Grid>
 
-                <Label Text="Version Beta 0.2" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,19,0,0"/>
-                <Label Text="Desarrollado por Luis Marquez y Lesly Daher" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Grid IsVisible="{Binding New}">
+                <StackLayout>
+                    <Label Text="¡Te damos la bienvenida a la aplicación!" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                    <Label Text="Por favor, introduce los datos a continuación para registrarte:" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="250"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="1" Text="Nombre:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black"></Label>
+                        <Entry Grid.Row="1" Grid.Column="1" Placeholder="Escribe tu nombre" Text="{Binding Info.Name}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" ></Entry>
+                        <Label Grid.Row="2" Text="Edad:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black"></Label>
+                        <Picker Grid.Row="2" Grid.Column="1" Title="Selecciona tu edad" HorizontalOptions="CenterAndExpand" SelectedIndex="{Binding Edad}">
+                            <Picker.Items>
+                                <x:String>15</x:String>
+                                <x:String>14</x:String>
+                                <x:String>13</x:String>
+                                <x:String>12</x:String>
+                                <x:String>11</x:String>
+                                <x:String>10</x:String>
+                                <x:String>9</x:String>
+                                <x:String>8</x:String>
+                                <x:String>7</x:String>
+                                <x:String>6</x:String>
+                                <x:String>5</x:String>
+                                <x:String>4</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label Grid.Row="3" Text="Sexo:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black"></Label>
+                        <Picker Grid.Row="3" Grid.Column="1" Title="Selecciona tu sexo" HorizontalOptions="CenterAndExpand" SelectedIndex="{Binding Sexo}">
+                            <Picker.Items>
+                                <x:String>Femenino</x:String>
+                                <x:String>Masculino</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Grid>
+                    <Button Text="Continuar" BorderColor="Black" BackgroundColor="#541c83" TextColor="White" Command="{Binding GotoMainPage}" />
+                    <Label Text="Version Beta 0.2" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,19,0,0"/>
+                    <Label Text="Desarrollado por Luis Marquez y Lesly Daher" HorizontalTextAlignment="Center" TextColor="Black"/>
+                </StackLayout>
+            </Grid>
 
-            </StackLayout>
-        </ScrollView>
+                <Grid IsVisible="{Binding Existing}">
+                <StackLayout>
+                    <Label  Text="¡Que bueno que estás de vuelta!" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
+                    <Label Text="{Binding Info.Name}" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large"  Margin="0,0,0,150"/>
+                    <Button Text="Continuar" BorderColor="Black" BackgroundColor="#541c83" TextColor="White" Command="{Binding GotoMainPage}" />
+                    <Label Text="Version Beta 0.2" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,19,0,0"/>
+                    <Label Text="Desarrollado por Luis Marquez y Lesly Daher" HorizontalTextAlignment="Center" TextColor="Black"/>
+                </StackLayout>
+            </Grid>
+               
+            
+   
+    </StackLayout>
     </Grid>
 </ContentPage>

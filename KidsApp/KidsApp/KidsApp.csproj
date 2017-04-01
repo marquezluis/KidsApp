@@ -38,6 +38,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\Services.cs" />
+    <Compile Include="Models\ExerciseModel.cs" />
+    <Compile Include="Extensions\IFile.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\TipsModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="ViewModels\ExitViewModel.cs" />
+    <Compile Include="ViewModels\LoadingViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\TipsViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\welcomeViewModel.cs" />
     <Compile Include="Views\Ejercicios\Advance\Advance.xaml.cs">
       <DependentUpon>Advance.xaml</DependentUpon>
     </Compile>
@@ -68,12 +81,6 @@
     <Compile Include="Views\Progresos\Progresos.xaml.cs">
       <DependentUpon>Progresos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Registration\Preaccept.xaml.cs">
-      <DependentUpon>Preaccept.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Registration\Registration.xaml.cs">
-      <DependentUpon>Registration.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Registration\TermsAndConditions.xaml.cs">
       <DependentUpon>TermsAndConditions.xaml</DependentUpon>
     </Compile>
@@ -101,6 +108,10 @@
   <ItemGroup>
     <Reference Include="ExifLib, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.1\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -171,19 +182,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\Registration\Preaccept.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Views\Registration\TermsAndConditions.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Registration\Registration.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

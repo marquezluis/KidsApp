@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KidsApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,9 @@ namespace KidsApp.Views
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            this.BindingContext = new LoadingViewModel();
+
         }
 
-        private async void Button_GoToMainPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Views.MainPage());
-        }
     }
 }

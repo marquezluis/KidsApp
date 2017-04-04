@@ -2,7 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsApp.Views.EjerciciosDelDia.EjerciciosDelDia"
-             Title="Atras         Ejercicios del Dia">
-    
-    
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             Title="Ejercicios del Dia">
+    <Grid Margin="20">
+        <Grid IsVisible="{Binding Instructions}">
+            <StackLayout>
+                <Label Text="En esta sección, empezarás a realizar los ejercicios que debes hacer diariamente. Cuando quieras empezar, selecciona 'Continuar'. Que tengas el mayor de los éxitos para que puedas alcanzar el bienestar que tanto quieres!!!" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Large"/>
+                <Image Source="Success.png"/>
+                <Grid VerticalOptions="EndAndExpand">
+                    <Button Text="Continuar" BackgroundColor="Purple" Command="{Binding GoToStart}" IsEnabled="True" TextColor="White"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+        <Grid IsVisible="{Binding Start}">
+            <ScrollView>
+                <StackLayout>
+
+                    <Label Text="{Binding ExerciseLevel}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                    <Image Source="{Binding ExerciseImage}" HorizontalOptions="Center" Aspect="AspectFill"/>
+                    <Label Text="{Binding ExerciseName}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="{Binding ExerciseDescription}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black"/>
+                    <Label Text="Cuéntanos, lo pudiste hacer???" HorizontalTextAlignment="Start" FontSize="Small" TextColor="Black" FontAttributes="Bold"/>
+                    <controls:CheckBox Checked="{Binding CheckedOpt1}" HorizontalOptions="StartAndExpand" DefaultText="Si, lo pude hacer muy bien" TextColor="Black"/>
+                    <controls:CheckBox Checked="{Binding CheckedOpt2}" HorizontalOptions="StartAndExpand" DefaultText="Si, pero no pude terminar" TextColor="Black"/>
+                    <controls:CheckBox Checked="{Binding CheckedOpt3}" HorizontalOptions="StartAndExpand" DefaultText="No lo pude hacer" TextColor="Black"/>
+                    <Grid VerticalOptions="EndAndExpand">
+                        <Button Text="Continuar" BackgroundColor="Purple" Command="{Binding GoToNext}" IsEnabled="True" TextColor="White"/>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+
+
 </ContentPage>

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace KidsApp.Models
 {
-    class ExerciseModel : ModelBase
+    public class ExerciseModel : ModelBase
     {
-        private Guid _Id;
-        public Guid Id { get { return _Id; } set { _Id = value; OnPropertyChanged(); } }
         private string _Type;
         public string Type { get { return _Type; } set { _Type = value; OnPropertyChanged(); } }
         private string _Exercise;
@@ -18,5 +16,9 @@ namespace KidsApp.Models
         public string Description { get { return _Description; } set { _Description = value; OnPropertyChanged(); } }
         private string _Image;
         public string Image { get { return _Image; } set { _Image = value; OnPropertyChanged(); } }
+    }
+    public class Rootobject
+    {
+        public ExerciseModel[] Exercises { get; set; }
     }
 }

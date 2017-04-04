@@ -16,6 +16,7 @@ namespace KidsApp.Views.Tips
         public Tips()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new TipsViewModel();
         }
     }

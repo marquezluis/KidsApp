@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KidsApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace KidsApp.Views.Help
         public Help()
         {
             InitializeComponent();
+            this.BindingContext = new HelpViewModel();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

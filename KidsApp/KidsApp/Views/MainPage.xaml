@@ -16,7 +16,7 @@
   on Android, must be declared as HEX code. -->
 
             <!-- AQUI FALTA EL HOLA Y EL NOMBRE DEL USUARIO -->
-            <Grid HorizontalOptions="Center">
+            <Grid HorizontalOptions="Center" Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>

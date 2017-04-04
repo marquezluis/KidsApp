@@ -7,6 +7,7 @@
         <Image Source="fondo.jpeg" Aspect="Fill"/>
         <ScrollView>
             <StackLayout Margin="20">
+                <Label Text="Ayuda y Manual de Usuario" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="25" Margin="0,10,0,20"/>
                 <Label Text="-Objetivo-" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="25"/>
                 <Label Text="Esta app esta basada en ayudar a niños y adolescentes entre las edades de 4 (cuatro) y quince (15) años a desarrollarse de forma física y, por ende, combatir el problema de obesidad y sedentarismo que ataca a la población mundial." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
                 <Label Text="-Características-" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black" FontSize="25"/>
@@ -16,7 +17,9 @@
                 <Label Text="En la sección 'Progresos', podrá visualizar los datos personales que suministró al registrarse y también el progreso que ha llevado desde que inició por primera vez la aplicación hasta el momento de la consulta." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
                 <Label Text="En la sección 'Ejercicios', están una serie ejercicios que están clasificados deacuerdo a su dificultad de manera informativa." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
                 <Label Text="En la sección 'Tips del día', se encuentran varios consejos útiles en el área deportiva, familiar y de nutrición. Adicionalmente, se encuentra el link 'Video del día', que redireccionará a YouTube para reproducir videos interesantes." HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" Margin="0,5,0,0"/>
-                
+                <Grid VerticalOptions="EndAndExpand" Margin="20">
+                    <Button Text="Regresar" Command="{Binding GoToMainPage}" BackgroundColor="Purple" TextColor="White"/>
+                </Grid>
             </StackLayout>
         </ScrollView>
     </Grid>

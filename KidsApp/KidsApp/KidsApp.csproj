@@ -39,27 +39,23 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\Services.cs" />
+    <Compile Include="LoadResourceText.cs" />
     <Compile Include="Models\ExerciseModel.cs" />
     <Compile Include="Extensions\IFile.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Models\TipsModel.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="ViewModels\ExerciseListViewModel.cs" />
+    <Compile Include="ViewModels\ExerciseViewModel.cs" />
     <Compile Include="ViewModels\ExitViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
     <Compile Include="ViewModels\LoadingViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\ProgresosViewModel.cs" />
     <Compile Include="ViewModels\TipsViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\welcomeViewModel.cs" />
-    <Compile Include="Views\Ejercicios\Advance\Advance.xaml.cs">
-      <DependentUpon>Advance.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ejercicios\Intermediate\Intermediate.xaml.cs">
-      <DependentUpon>Intermediate.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ejercicios\Newbie\Newbie.xaml.cs">
-      <DependentUpon>Newbie.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Ejercicios\Ejercicios.xaml.cs">
       <DependentUpon>Ejercicios.xaml</DependentUpon>
     </Compile>
@@ -149,8 +145,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <EmbeddedResource Include="Exercises.json" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
+    <EmbeddedResource Include="Tips.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\welcome.xaml">
@@ -194,32 +192,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\Ejercicios\Newbie\Newbie.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Views\Help\Help.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Ejercicios\Intermediate\Intermediate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Ejercicios\Advance\Advance.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Ejercicios\Exercises\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Views\Tips\DisplayTips.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -231,6 +209,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PCLTextResource.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

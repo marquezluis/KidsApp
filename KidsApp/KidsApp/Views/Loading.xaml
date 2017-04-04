@@ -5,12 +5,16 @@
              Title="Cargando...">
 
     <Grid>
-        <Image Source="FondoAzul.jpg" Aspect="Fill"/>
+        <Image Source="FondoVerde.jpg" Aspect="Fill"/>
         <StackLayout>
             <Label Text="Mientras carga el menu..." HorizontalTextAlignment="Center" TextColor="Black" FontSize="Large"/>
             <Label Text="TIP DEL DIA" HorizontalTextAlignment="Center" Font="Bold,Italic,30" TextColor="Black" Margin="0,30,0,0"/>
+            <Label Text="{Binding TipsType}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+            <Image Source="{Binding TipsImage}" HorizontalOptions="Center" Aspect="AspectFill"/>
+            <Label Text="{Binding TipsName}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="{Binding TipsDescription}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black"/>
             <Grid VerticalOptions="EndAndExpand">
-                <Label HeightRequest="40" Text="Cargando..." HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalOptions="End" BackgroundColor="#003366" FontSize="Large" WidthRequest="500"/>
+                <Label HeightRequest="40" Text="Cargando..." HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalOptions="End" BackgroundColor="Purple" FontSize="Large" WidthRequest="500" FontAttributes="Italic" TextColor="White"/>
             </Grid>
         </StackLayout>
     </Grid>

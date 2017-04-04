@@ -19,7 +19,7 @@ namespace KidsApp.Views
             NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new LoadingViewModel();
 
-        }
 
+        }
     }
 }

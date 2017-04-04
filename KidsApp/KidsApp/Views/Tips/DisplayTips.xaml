@@ -1,5 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsApp.Views.Tips.DisplayTips">
+    <Grid Margin="20">
+        <ScrollView>
+            <StackLayout>
+                <Label Text="{Binding TipsType}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                <Image Source="{Binding TipsImage}" HorizontalOptions="Center" Aspect="AspectFill"/>
+                <Label Text="{Binding TipsName}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="{Binding TipsDescription}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black"/>
+                <Grid VerticalOptions="EndAndExpand">
+                    <StackLayout>
+                        <Button Text="Continuar" BackgroundColor="Purple" Command="{Binding GoToNext}" IsEnabled="True" TextColor="White"/>
+                        <Button Text="Regresar" BackgroundColor="Purple" Command="{Binding GoToMainPage}" IsEnabled="True" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

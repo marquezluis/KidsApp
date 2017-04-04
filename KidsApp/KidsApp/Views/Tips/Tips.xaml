@@ -6,14 +6,14 @@
     <Grid>
         <Image Source="fondo.jpeg" IsOpaque="True"  Aspect="AspectFill"/>
         <StackLayout Margin="20">
-            <Label Text="Para que tengas mejores resultados en tus entrenamientos y en el área deportiva:" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,10,0,5"/>
-            <Button Text="Tips Deportivos" BorderColor="Black" Command="{Binding GoToDisplayTips}" BackgroundColor="#541c83" TextColor="White" />
-            <Label Text="Estos consejos te ayudarán a tener una mejor relación con tus familiares y amigos:" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,5,0,5"/>
-            <Button Text="Tips comunicacionales" BorderColor="Black" Command="{Binding GoToDisplayTips}" BackgroundColor="#541c83" TextColor="White" />
-            <Label Text="Una muy buena guía de alimentación para que cada día te alimentes de forma mucho más sana para tu salud:" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,5,0,5"/>
-            <Button Text="Tips de nutrición" BorderColor="Black" Command="{Binding GoToDisplayTips}" BackgroundColor="#541c83" TextColor="White" />
-            <Label Text="Video diario de reflexión en temas muy diversos e interesantes para ver en YouTube:" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,5,0,5"/>
+            <Label Text="En esta sección, encontrarás distintos tips deportivos, de nutrición, de valores y entretenimiento para que cada dia tengas mayores conocimientos y usarlos siempre en tu vida normal" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,10,0,5"/>
+            <Label Text="Para que los conozcas, dale clic al siguiente botón:" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,10,0,5"/>
+            <Button Text="Tips" BorderColor="Black" Command="{Binding GoToDisplayTips}" BackgroundColor="#541c83" TextColor="White" />
+            <Label Text="También te ofrecemos un video diario de reflexión en temas muy diversos e interesantes para ver en YouTube:" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,5,0,5"/>
             <Button Text="Video del día" BorderColor="Black" Command="{Binding GoToYouTube}" BackgroundColor="#541c83" TextColor="White" />
+            <Grid VerticalOptions="EndAndExpand">
+                <Button Text="Regresar" Command="{Binding GoToMainPage}" BackgroundColor="#003366" TextColor="White"/>
+            </Grid>
         </StackLayout>
     </Grid>
 </ContentPage>

@@ -19,8 +19,7 @@ using KidsApp.Views.Help;
 
 namespace KidsApp.ViewModels
 {
-    public class 
-        MainPageViewModel : ViewModelBase
+    public class MainPageViewModel : ViewModelBase
     {
         public MainPageViewModel()
         {
@@ -47,19 +46,9 @@ namespace KidsApp.ViewModels
 
         private async void OnLoad()
         {
-            try
-            {
                 var a = DependencyService.Get<IFile>().Exist("Info");
                 var jsonUser = DependencyService.Get<IFile>().LoadText("Info");
                 Info = JsonConvert.DeserializeObject<UserModel>(jsonUser);
-
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
-
         }
 
 

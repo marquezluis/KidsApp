@@ -16,12 +16,9 @@ namespace KidsApp.Views.Progresos
         public Progresos()
         {
             InitializeComponent();
-            
-        }
+            NavigationPage.SetHasNavigationBar(this, false);
+            this.BindingContext = new ProgresosViewModel();
 
-        private async void Button_GoToMainPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Views.MainPage());
         }
     }
 }

@@ -72,15 +72,13 @@
                 <Grid IsVisible="{Binding Existing}">
                 <StackLayout>
                     <Label  Text="¡Que bueno que estás de vuelta!" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="0,5,0,0"/>
-                    <Label Text="{Binding Info.Name}" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large"  Margin="0,0,0,150"/>
+                    <Label Text="{Binding Info.Name}" VerticalTextAlignment="Center" HorizontalTextAlignment=" Center" FontAttributes="Bold" TextColor="Black" FontSize="Large"  Margin="0,0,0,100"/>
+                    <Image Source="WelcomeBack.png"/>
                     <Button Text="Continuar" BorderColor="Black" BackgroundColor="#541c83" TextColor="White" Command="{Binding GotoMainPage}" />
                     <Label Text="Version Beta 0.2" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,19,0,0"/>
                     <Label Text="Desarrollado por Luis Marquez y Lesly Daher" HorizontalTextAlignment="Center" TextColor="Black"/>
                 </StackLayout>
             </Grid>
-               
-            
-   
     </StackLayout>
     </Grid>
 </ContentPage>

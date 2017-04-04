@@ -200,6 +200,96 @@
   <ItemGroup>
     <BundleResource Include="Resources\FondoAzul.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AbBasico.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AbBicicleta.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AbCruzado.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ElevPiernas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ElevPiernasRodPecho.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PesoMuerto.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PlachascodosBasica.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PlanchaCodos.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ScissorsJump.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sentadillas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SentadillaSalto.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\StaticRun.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LungeInt.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AbBicicletaBasico.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\WelcomeBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\StaticRunDespl.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AbBicicletaPausa.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ElevPiernasFront.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsTolerante.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsTopotepuy.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsVegetales.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsAvila.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsCompetencias.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsCordial.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsFrutas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsMerienda.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsPanquecas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsPqEste.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsProteccion.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TipsResponsable.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -2,17 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsApp.Views.Ejercicios.Ejercicios">
-    <Grid>
-        <Image Source="fondo.jpeg" Aspect="Fill"/>
-        <ScrollView>
-            <StackLayout Margin="20">
-                <Label Text="Si estas empezando a entrenar, te aconsejo que empieces por este nivel:"/>
-                <Button Text="Nivel Principiante" BorderColor="Black" Clicked="Button_GoToNewbie" BackgroundColor="#541c83" TextColor="White" />
-                <Label Text="Si ya tienes tiempo ejercitando y buscas un poco mas de intensidad:"/>
-                <Button Text="Nivel Intermedio" BorderColor="Black" Clicked="Button_GoToIntermediate" BackgroundColor="#541c83" TextColor="White" />
-                <Label Text="Si buscas perfeccionar los ejercicios:"/>
-                <Button Text="Nivel Avanzado" BorderColor="Black" Clicked="Button_GoToAdvance" BackgroundColor="#541c83" TextColor="White" />
+    <Grid Margin="20">
+        <Grid IsVisible="{Binding Instructions}">
+            <StackLayout>
+                <Label Text="En esta sección, podrás ver los ejercicios que hay disponibles. Selecciona 'Continuar' para repases uno a uno:" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Large"/>
+                <Grid VerticalOptions="EndAndExpand">
+                    <Button Text="Continuar" BackgroundColor="Purple" Command="{Binding GoToList}" IsEnabled="True" TextColor="White"/>
+                </Grid>
             </StackLayout>
-        </ScrollView>
+        </Grid>
+        <Grid IsVisible="{Binding List}">
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="{Binding ExerciseLevel}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                    <Image Source="{Binding ExerciseImage}" HorizontalOptions="Center" Aspect="AspectFill"/>
+                    <Label Text="{Binding ExerciseName}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="{Binding ExerciseDescription}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black"/>
+                    <Grid VerticalOptions="EndAndExpand">
+                        <StackLayout>
+                            <Button Text="Continuar" BackgroundColor="Purple" Command="{Binding GoToNext}" IsEnabled="True" TextColor="White"/>
+                            <Button Text="Regresar" BackgroundColor="Purple" Command="{Binding GoToMainPage}" IsEnabled="True" TextColor="White"/>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
     </Grid>
+
+
 </ContentPage>
